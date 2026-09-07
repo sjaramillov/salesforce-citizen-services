@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "verifiedDate": "2026-09-07",
+  "project": "Servicios ciudadanos",
+  "scope": "Fuentes para dos diagramas editables. Arquitectura de solución propia y lectura cualitativa del marco Salesforce Well-Architected; sin puntuación, certificación ni despliegue afirmado.",
+  "officialSources": [
+    {
+      "id": "sfwa-overview",
+      "title": "Salesforce Well-Architected — Overview",
+      "url": "https://architect.salesforce.com/docs/architect/well-architected/guide/overview.html",
+      "usedFor": "Jerarquía oficial: tres capacidades y ocho comportamientos; marco de plataforma para las decisiones de diseño."
+    },
+    {
+      "id": "sfwa-trusted",
+      "title": "Salesforce Well-Architected — Trusted",
+      "url": "https://architect.salesforce.com/docs/architect/well-architected/guide/trusted-overview.html",
+      "usedFor": "Seguridad, conformidad y funcionamiento fiable, con sus criterios de segundo nivel."
+    },
+    {
+      "id": "sfwa-easy",
+      "title": "Salesforce Well-Architected — Easy",
+      "url": "https://architect.salesforce.com/docs/architect/well-architected/guide/easy-overview.html",
+      "usedFor": "Intención, automatización y experiencia atractiva; valor, mantenibilidad y uso."
+    },
+    {
+      "id": "sfwa-adaptable",
+      "title": "Salesforce Well-Architected — Adaptable",
+      "url": "https://architect.salesforce.com/docs/architect/well-architected/guide/adaptable-overview",
+      "usedFor": "Resiliencia y composición; ciclo de vida, incidentes, continuidad, responsabilidades, interoperabilidad y empaquetado."
+    }
+  ],
+  "localEvidence": [
+    {
+      "path": "docs/architecture.md",
+      "usedFor": "Separación entre estado actual y arquitectura objetivo; recorrido de consulta y escritura propuesta.",
+      "sha256": "18bb2f4f61a1d5c12168d1c415c7e9750f3f37d12d505404cddb6535bd1d36d5"
+    },
+    {
+      "path": "docs/base/api-layering.md",
+      "usedFor": "Responsabilidades y consumidores de Experience, Process y System APIs.",
+      "sha256": "1507ff9d7e9ed2503e5f5a0c68b097150da5c11d6f334d9e92d03164509fcf9f"
+    },
+    {
+      "path": "docs/pilot.md",
+      "usedFor": "Trámite acotado, confirmación explícita, idempotencia y revisión humana por implementar.",
+      "sha256": "a6cef4c6e78c6e19449a205f0f7e78d34f5856806d2ff42d05ed7017503abb10"
+    },
+    {
+      "path": "docs/evidence/status.md",
+      "usedFor": "Límites de compilación, ejecución, integración y evidencia del portal.",
+      "sha256": "ff5b809b0ef7176464311ba8a40524051dd17228c4d52a1f80397a195f32928d"
+    },
+    {
+      "path": "docs/evidence/public-portal-check.json",
+      "usedFor": "Observación de preparación seguida de error; operación del portal no confirmada y causa no establecida.",
+      "sha256": "099634f9bcd5e9af1c928ff3c41acc7b59fb28b88d7a53e308be0835b1edfcf3"
+    }
+  ],
+  "interpretation": "Nombres oficiales preservados; traducciones de trabajo. Las decisiones y pendientes son aplicación propia al proyecto. El marco no acredita la implementación ni la disponibilidad del portal.",
+  "assetProvenance": "SVG nativos creados con formas, conectores y texto. Sin logos, material gráfico de terceros, imágenes incrustadas, fuentes embebidas o dependencias de red.",
+  "assets": [
+    {
+      "path": "solution-architecture.svg",
+      "width": 1800,
+      "height": 1200,
+      "status": "Editable vector; current evidence and proposed connections distinguished",
+      "sha256": "0b671afb73fb1ec133d6a1d3a98c4ab1f0adb43310ae860e76e9deb816689dad"
+    },
+    {
+      "path": "well-architected.svg",
+      "width": 1800,
+      "height": 1200,
+      "status": "Editable vector; qualitative decisions, evidence and pending work",
+      "sha256": "dd2e27a801e883fe843cfb91c1bbe9460c2c6e477ee448fb8bb21b41d12a4cfd"
+    }
+  ],
+  "repositoryIdentifier": "salesforce-citizen-services"
+}

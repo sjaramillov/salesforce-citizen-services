@@ -1,0 +1,308 @@
+{
+  "schemaVersion": 1,
+  "generatedAtUtc": "2026-09-07T16:05:52.780799+00:00",
+  "scope": "Selective extraction of authored technical artifacts; provenance records do not imply deployment.",
+  "files": [
+    {
+      "path": "force-app/main/default/lwc/cscBenefitPortal/cscBenefitPortal.css",
+      "status": "adapted",
+      "sources": [
+        {
+          "project": "citizen-services-baseline",
+          "path": "force-app/main/default/lwc/cscBenefitPortal/cscBenefitPortal.css",
+          "sha256": "4c168b749f055d43240a183fd50b4218c34558fa538123a372b43c33385e9307"
+        }
+      ],
+      "changes": [
+        "Retained existing component structure and styling; neutral demo names and honest illustrative labels.",
+        "Identidad independiente del proyecto y ajuste editorial; sin cambios de comportamiento."
+      ],
+      "sha256": "822bcfef5afdad8cf7d4e137488a711ff3aba27eb301c5d4a29f31a96c861d75"
+    },
+    {
+      "path": "force-app/main/default/lwc/cscBenefitPortal/cscBenefitPortal.js-meta.xml",
+      "status": "adapted",
+      "sources": [
+        {
+          "project": "citizen-services-baseline",
+          "path": "force-app/main/default/lwc/cscBenefitPortal/cscBenefitPortal.js-meta.xml",
+          "sha256": "e010f8d9ee9eeade3c55743235bf6d8a61e09bd785d41bc17a80f6c1e38d8477"
+        }
+      ],
+      "changes": [
+        "Retained existing component structure and styling; neutral demo names and honest illustrative labels."
+      ],
+      "sha256": "e010f8d9ee9eeade3c55743235bf6d8a61e09bd785d41bc17a80f6c1e38d8477"
+    },
+    {
+      "path": "force-app/main/default/lwc/cscBenefitPortal/cscBenefitPortal.js",
+      "status": "adapted",
+      "sources": [
+        {
+          "project": "citizen-services-baseline",
+          "path": "force-app/main/default/lwc/cscBenefitPortal/cscBenefitPortal.js",
+          "sha256": "41ed5752d78b8d40d3a6b3e6165c09777758ea45599042671eef29d4bb94f379"
+        }
+      ],
+      "changes": [
+        "Retained existing component structure and styling; neutral demo names and honest illustrative labels."
+      ],
+      "sha256": "4a3e42d8853c37ae799e1e5100633b476fa13a31c1455133893eb9431bffbfdc"
+    },
+    {
+      "path": "force-app/main/default/lwc/cscBenefitPortal/cscBenefitPortal.html",
+      "status": "adapted",
+      "sources": [
+        {
+          "project": "citizen-services-baseline",
+          "path": "force-app/main/default/lwc/cscBenefitPortal/cscBenefitPortal.html",
+          "sha256": "588a795a43259f0bb6df794e13e9bcbd4be0d1de52a1788317124248b5e7f84b"
+        }
+      ],
+      "changes": [
+        "Retained existing component structure and styling; neutral demo names and honest illustrative labels."
+      ],
+      "sha256": "40102e7bcb745c89b4f49c76740670bda37a8d77134bba19f1bf7e70018d285d"
+    },
+    {
+      "path": "sfdx-project.json",
+      "status": "adapted",
+      "sources": [
+        {
+          "project": "citizen-services-baseline",
+          "path": "sfdx-project.json",
+          "sha256": "9a49b894eacdbea29ff3aebacec4b2903a05ae172c5d855fbc5b1270795d7911"
+        }
+      ],
+      "changes": [
+        "Public generic login URL only; project name changed. API version inherited, target support unverified.",
+        "Identidad independiente del proyecto y ajuste editorial; sin cambios de comportamiento."
+      ],
+      "sha256": "dff772d130c006b84042b44d6ec3352575047c7824baf7c5753c78c385b4f2f1"
+    },
+    {
+      "path": "mulesoft/benefit-status-sys-api/api/benefit-status-sys-api.openapi.yaml",
+      "status": "adapted",
+      "sources": [
+        {
+          "project": "citizen-services-baseline",
+          "path": "mulesoft/benefit-status-sys-api/api/benefit-status-sys-api.openapi.yaml",
+          "sha256": "b5ccb2f03913c7b9ac6ea4ba10d1945b4448ed7d39b0aefc39e0956f7fa70cd4"
+        }
+      ],
+      "changes": [
+        "Selected technical source copied; fictional demo names normalized; internal API/flow names retained.",
+        "Contract description normalized to the independent citizen-service demo."
+      ],
+      "sha256": "e8e891444fb4c3e925503223c9dc57ee57b3a6661468c8ab67865bfc42eb0aac"
+    },
+    {
+      "path": "mulesoft/benefit-case-prc-api/api/benefit-case-prc-api.openapi.yaml",
+      "status": "adapted",
+      "sources": [
+        {
+          "project": "citizen-services-baseline",
+          "path": "mulesoft/benefit-case-prc-api/api/benefit-case-prc-api.openapi.yaml",
+          "sha256": "5a8ba52d871f054983477ff3c426e5d6dc06eb439ae7a6040c8e4bc765b5d4f4"
+        }
+      ],
+      "changes": [
+        "Selected technical source copied; fictional demo names normalized; internal API/flow names retained."
+      ],
+      "sha256": "f585c03306f31d4b15456628c6f92671c7c0889a362decef07f93adb065b938a"
+    },
+    {
+      "path": "mulesoft/agentforce-benefit-exp-api/api/agentforce-benefit-exp-api.openapi.yaml",
+      "status": "adapted",
+      "sources": [
+        {
+          "project": "citizen-services-baseline",
+          "path": "mulesoft/agentforce-benefit-exp-api/api/agentforce-benefit-exp-api.openapi.yaml",
+          "sha256": "1a10139973999ea73cfbae5bcce08d533773f62a9e0501d4e0fb995570f1a97d"
+        }
+      ],
+      "changes": [
+        "Selected technical source copied; fictional demo names normalized; internal API/flow names retained."
+      ],
+      "sha256": "1cd4dcd51e14ed19b39b61f41b0ae937ed3dc2420e9fc27e85cf28b6703300e5"
+    },
+    {
+      "path": "mulesoft/benefit-status-sys-api/src/main/mule/benefit-status-sys-api.xml",
+      "status": "adapted",
+      "sources": [
+        {
+          "project": "citizen-services-baseline",
+          "path": "mulesoft/benefit-status-sys-api/src/main/mule/benefit-status-sys-api.xml",
+          "sha256": "dfc4ebb7741858d5e58340ed56f18de12c3419987dfb78e97b75f74b48094653"
+        }
+      ],
+      "changes": [
+        "Selected technical source copied; fictional demo names normalized; internal API/flow names retained.",
+        "Declared missing doc namespace so XML is well-formed; no runtime correctness claimed."
+      ],
+      "sha256": "3c259d4adbab3ffec8b5a3cb279f27cbc857c230fff979f0e72968c1b0851303"
+    },
+    {
+      "path": "mulesoft/benefit-status-sys-api/src/main/resources/config.yaml",
+      "status": "adapted",
+      "sources": [
+        {
+          "project": "citizen-services-baseline",
+          "path": "mulesoft/benefit-status-sys-api/src/main/resources/config.yaml",
+          "sha256": "9f14cbbb0dc77c52046322454c20fbbba973bf61bfc619bf6f87f6b333863d20"
+        }
+      ],
+      "changes": [
+        "Selected technical source copied; fictional demo names normalized; internal API/flow names retained.",
+        "Replaced target service alias with explicit placeholder."
+      ],
+      "sha256": "4e1e467a2e8abdc0373f8151171f5ee05bb4a7b896f250b4e97e31c629f7ff14"
+    },
+    {
+      "path": "mulesoft/benefit-status-sys-api/src/main/resources/dev-secure-properties.example.yaml",
+      "status": "adapted",
+      "sources": [
+        {
+          "project": "citizen-services-baseline",
+          "path": "mulesoft/benefit-status-sys-api/src/main/resources/dev-secure-properties.example.yaml",
+          "sha256": "6b627b2a73b9a023a420aa161687536767e0f6d3f22fa7028d3674bc2adc7598"
+        }
+      ],
+      "changes": [
+        "Selected technical source copied; fictional demo names normalized; internal API/flow names retained."
+      ],
+      "sha256": "6b627b2a73b9a023a420aa161687536767e0f6d3f22fa7028d3674bc2adc7598"
+    },
+    {
+      "path": "mulesoft/benefit-status-sys-api/src/test/munit/benefit-status-sys-api-test.xml",
+      "status": "adapted",
+      "sources": [
+        {
+          "project": "citizen-services-baseline",
+          "path": "mulesoft/benefit-status-sys-api/src/test/munit/benefit-status-sys-api-test.xml",
+          "sha256": "2566ee2c804400ff3d0bcaa0ff300334a2e58dfaf96630b534917edca9dba183"
+        }
+      ],
+      "changes": [
+        "Selected technical source copied; fictional demo names normalized; internal API/flow names retained."
+      ],
+      "sha256": "460d8fc95ae9bea72d322c100fb6a40f3b51570bfe020c9b94bc9e7e087af2b5"
+    },
+    {
+      "path": "mulesoft/benefit-status-sys-api/pom.xml",
+      "status": "adapted",
+      "sources": [
+        {
+          "project": "citizen-services-baseline",
+          "path": "mulesoft/benefit-status-sys-api/pom.xml",
+          "sha256": "e7a8c180ea5df12f63b19dc277db7431ef7ffd56465abc2eec0997662dce6e2d"
+        }
+      ],
+      "changes": [
+        "Selected technical source copied; fictional demo names normalized; internal API/flow names retained."
+      ],
+      "sha256": "e7a8c180ea5df12f63b19dc277db7431ef7ffd56465abc2eec0997662dce6e2d"
+    },
+    {
+      "path": "mulesoft/benefit-status-sys-api/sql/citizen_benefit_case.sql",
+      "status": "adapted",
+      "sources": [
+        {
+          "project": "citizen-services-baseline",
+          "path": "mulesoft/benefit-status-sys-api/sql/citizen_benefit_case.sql",
+          "sha256": "44de1f43857446c9037ac77c0751f43685fc1da06ce581dab1552f2280c95c40"
+        }
+      ],
+      "changes": [
+        "Selected technical source copied; fictional demo names normalized; internal API/flow names retained."
+      ],
+      "sha256": "8199bf36443bbe8f5d26bd7e50a63f79cc8d12c162161ec58bf178c4efd09dfa"
+    },
+    {
+      "path": "salesforce/agentforce/benefit-agent.reference.agent",
+      "status": "adapted",
+      "sources": [
+        {
+          "project": "citizen-services-baseline",
+          "path": "force-app/main/default/genAiPlannerBundles/CC_Service_Agent_v1/agentScript/CC_Service_Agent_v1_definition.agent",
+          "sha256": "0f91db2c5df42e91d34ef8e4795b36f8a1bba2225983305c224456c5943544f2"
+        }
+      ],
+      "changes": [
+        "Decoded Base64 to inspectable reference source; removed service-user identity; retained original internal topic names.",
+        "Reduced embedded sample records to two declared synthetic examples; AgentScript is reference material, excluded from deployable force-app.",
+        "Removed trailing whitespace; no semantic change."
+      ],
+      "sha256": "9e6b7bb96871e80956aefe228af557117e4d2eca7182cb538cbde2fab51e3b17"
+    }
+  ],
+  "documentationSources": [
+    {
+      "project": "citizen-services-baseline",
+      "path": "docs/demo-scope.md",
+      "sha256": "3dfecfcc3ae6565e7c3d408ee1ad7fe094473435e29c4efb34a4f1455a3b1670",
+      "usage": "Technical synthesis/evidence boundaries only; original file not copied."
+    },
+    {
+      "project": "citizen-services-baseline",
+      "path": "docs/project-context.md",
+      "sha256": "d7c494687bc597e57b4b008bcc048165bba1185ea080db9a656bad4f7d53ae68",
+      "usage": "Technical synthesis/evidence boundaries only; original file not copied."
+    },
+    {
+      "project": "citizen-services-baseline",
+      "path": "docs/architecture.md",
+      "sha256": "4776883d92b3f155e8604e20ea54366d3c06ed633e08f3f8852d627cf9002030",
+      "usage": "Technical synthesis/evidence boundaries only; original file not copied."
+    },
+    {
+      "project": "citizen-services-baseline",
+      "path": "docs/legacy-integration-cobol-java.md",
+      "sha256": "39e93f604581eef4dc1cbce15599721f729b7bc25b6ce8e079466369d4b588df",
+      "usage": "Technical synthesis/evidence boundaries only; original file not copied."
+    },
+    {
+      "project": "citizen-services-baseline",
+      "path": "docs/oracle-cobolsim.md",
+      "sha256": "941babb940506162eafe926c71872c217a88995b300e7b3c210dba1d930f82e4",
+      "usage": "Technical synthesis/evidence boundaries only; original file not copied."
+    },
+    {
+      "project": "citizen-services-baseline",
+      "path": "docs/panel-poc-48h-execution-log.md",
+      "sha256": "fd7582e0f56b05dc41aff7fc7d051c50e29e2aeabfb507922dc5efa9f67a32fe",
+      "usage": "Technical synthesis/evidence boundaries only; original file not copied."
+    },
+    {
+      "project": "citizen-services-baseline",
+      "path": "docs/salesforce/experience-cloud-automation.md",
+      "sha256": "bdd6e034b3a82c14ca9190a1c1a0ef2e7697080e4277a34a42d13fd83cc316a9",
+      "usage": "Technical synthesis/evidence boundaries only; original file not copied."
+    },
+    {
+      "project": "citizen-services-baseline",
+      "path": "mulesoft/api-led-portfolio.md",
+      "sha256": "99724d24e482685281d23a0282b302104141f742ddc041cae1e0e5daf15350bc",
+      "usage": "Technical synthesis/evidence boundaries only; original file not copied."
+    },
+    {
+      "project": "citizen-services-baseline",
+      "path": "mulesoft/benefit-status-sys-api/README.md",
+      "sha256": "0b6ffe6a394c789e4d27b1e873346332656ab2a6a466ae23541f28c8ec601a65",
+      "usage": "Technical synthesis/evidence boundaries only; original file not copied."
+    },
+    {
+      "project": "citizen-services-baseline",
+      "path": "README.md",
+      "sha256": "1ab901ac425f00d3fcef9c502b12b9ecc26a555732232fe1567441b95e998064",
+      "usage": "Technical synthesis/evidence boundaries only; original file not copied."
+    },
+    {
+      "project": "citizen-services-baseline",
+      "path": "aidlc-docs/aidlc-state.md",
+      "sha256": "8c0a75b133c4f18917e7df1205c619c3556b8e774b7ab4250a5b3f628e575b76",
+      "usage": "Technical synthesis/evidence boundaries only; original file not copied."
+    }
+  ],
+  "authorshipNote": "Selected source is user workspace material; SHA-256 records lineage, not license or ownership. Generated tenant graph and bundle, branding and third-party assets excluded."
+}

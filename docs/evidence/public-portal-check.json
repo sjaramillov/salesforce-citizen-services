@@ -1,0 +1,18 @@
+{
+  "checkedAtUtc": "2026-09-07T16:08:55Z",
+  "method": "Read-only public page opened in in-app browser by coordinating agent",
+  "urlSource": "Derived from CSC demo My Domain and previously documented public site prefix; operational URL deliberately omitted",
+  "observedTitle": "Error Page",
+  "observedMessageSummary": "Initially Salesforce Stay Tuned preparation page; after auto-refresh, the same URL/title showed We've hit a snag and suggested contacting support or its status page.",
+  "followUpObservedAtUtc": null,
+  "followUpTimeNote": "Second read was reported in the same browser session; no independently established UTC timestamp was supplied.",
+  "portalVisible": false,
+  "portalInteractionTested": false,
+  "authenticatedAgentTested": false,
+  "backendTested": false,
+  "httpStatus": null,
+  "conclusion": "Citizen portal operation is not confirmed at this URL and time.",
+  "cause": "Not established",
+  "limitations": "Two reads in one browser session at a derived candidate URL. Does not establish permanent unavailability or verify the source publication URL independently.",
+  "adminChangesPerformed": false
+}

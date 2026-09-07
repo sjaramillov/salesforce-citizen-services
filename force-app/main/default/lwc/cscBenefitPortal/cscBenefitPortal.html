@@ -1,0 +1,224 @@
+<template>
+  <section class="portal" aria-label="Portal de beneficios al ciudadano">
+    <p class="demo-notice">Demostración con datos ficticios. La consulta y la conversación son ejemplos locales; no se envían solicitudes ni documentos.</p>
+    <div class="signal-strip" aria-label="Resumen del servicio">
+      <template for:each={serviceSignals} for:item="signal">
+        <div key={signal.label} class={signal.className}>
+          <span class="signal-dot" aria-hidden="true"></span>
+          <span>{signal.label}</span>
+          <strong>{signal.value}</strong>
+        </div>
+      </template>
+    </div>
+
+    <div class="hero">
+      <div class="hero__content">
+        <div class="hero__main">
+          <p class="eyebrow">Centro de Servicio Ciudadano</p>
+          <h1>Beneficios al ciudadano</h1>
+          <p class="hero__copy">
+            Consulta el estado de tus beneficios, documentos pendientes, próximos pasos y avisos
+            preventivos con una experiencia clara y asistida.
+          </p>
+          <div class="hero__actions" aria-label="Acciones principales">
+            <button class="button button--primary" type="button" onclick={handleConsult}>
+              Consultar beneficio
+            </button>
+            <button class="button button--secondary" type="button" onclick={handleAgent}>
+              Ver respuesta de ejemplo
+            </button>
+          </div>
+        </div>
+
+        <div class="hero__insight" aria-label="Resumen del servicio">
+          <div class="insight-copy">
+            <span class="insight-kicker">Asistencia digital</span>
+            <strong>Respuestas simples con atención humana disponible</strong>
+          </div>
+          <div class="hero-flow" aria-label="Flujo del caso">
+            <span><small>Consulta</small>Portal</span>
+            <span><small>Respuesta</small>Asistente</span>
+            <span><small>Soporte</small>Sistema interno</span>
+            <span><small>Control</small>Seguimiento</span>
+          </div>
+        </div>
+      </div>
+
+      <aside class="hero__panel" aria-label="Caso destacado">
+        <div class="case-topline">
+          <div class="case-status">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span>{selectedCase.status}</span>
+          </div>
+          <span class="case-updated">{selectedCase.updated}</span>
+        </div>
+        <h2>{selectedCase.citizen}</h2>
+
+        <div class="case-progress" aria-label={selectedCase.progressLabel}>
+          <div class="progress-copy">
+            <span>{selectedCase.progressLabel}</span>
+            <strong>{selectedCase.sla}</strong>
+          </div>
+          <div class="progress-track" aria-hidden="true">
+            <span></span>
+          </div>
+        </div>
+
+        <dl class="case-facts case-facts--featured">
+          <div>
+            <dt>Referencia</dt>
+            <dd>{selectedCase.reference}</dd>
+          </div>
+          <div>
+            <dt>Caso</dt>
+            <dd>{selectedCase.caseNumber}</dd>
+          </div>
+          <div>
+            <dt>Beneficio</dt>
+            <dd>{selectedCase.benefit}</dd>
+          </div>
+          <div>
+            <dt>Fecha límite</dt>
+            <dd>{selectedCase.deadline}</dd>
+          </div>
+        </dl>
+      </aside>
+    </div>
+
+    <div class="service-grid">
+      <section class="lookup-panel" aria-labelledby="lookup-title">
+        <div class="section-heading">
+          <p class="eyebrow">Consulta guiada</p>
+          <h2 id="lookup-title">Estado del beneficio</h2>
+        </div>
+
+        <label class="field-label" for="caseNumber">Número de caso</label>
+        <div class="lookup-row">
+          <input
+            id="caseNumber"
+            class="case-input"
+            type="text"
+            value={lookupValue}
+            oninput={handleLookupInput}
+            aria-describedby="caseHelp lookupMessage"
+          />
+          <button class="button button--primary" type="button" onclick={handleLookup}>
+            Buscar
+          </button>
+        </div>
+        <p id="caseHelp" class="help-text">Caso de referencia: BEN-2026-004219.</p>
+        <p id="lookupMessage" class={lookupMessageClass} aria-live="polite">{lookupMessage}</p>
+
+        <div class="result-band">
+          <div>
+            <span class="mini-label">Documento requerido</span>
+            <strong>{selectedCase.missingDocument}</strong>
+          </div>
+          <div>
+            <span class="mini-label">Canal preferido</span>
+            <strong>{selectedCase.preferredChannel}</strong>
+          </div>
+          <div>
+            <span class="mini-label">Siguiente acción</span>
+            <strong>{selectedCase.nextAction}</strong>
+          </div>
+          <div>
+            <span class="mini-label">Aviso preventivo</span>
+            <strong>{selectedCase.proactiveNotice}</strong>
+          </div>
+        </div>
+
+        <div class="document-board" aria-label="Lista de documentos">
+          <template for:each={documentItems} for:item="item">
+            <div key={item.label} class={item.className}>
+              <span class="document-icon" aria-hidden="true">{item.index}</span>
+              <div>
+                <strong>{item.label}</strong>
+                <span>{item.description}</span>
+              </div>
+            </div>
+          </template>
+        </div>
+      </section>
+
+      <section class="agent-panel" aria-labelledby="agent-title">
+        <div class="agent-header">
+          <div class="agent-mark" aria-hidden="true">A</div>
+          <div>
+            <p class="eyebrow">Conversación ilustrativa</p>
+            <h2 id="agent-title">Asistente CSC</h2>
+          </div>
+        </div>
+        <p>
+          Un asistente digital atiende solicitudes repetitivas y pasa a un funcionario cuando
+          falta identidad, contexto o criterio humano.
+        </p>
+        <div class="agent-preview" aria-label="Vista previa de conversación">
+          <template for:each={agentMessages} for:item="message">
+            <div key={message.text} class={message.className}>
+              <span>{message.speaker}</span>
+              <p>{message.text}</p>
+            </div>
+          </template>
+        </div>
+        <ul class="agent-list">
+          <li>Consulta estado y documentos pendientes.</li>
+          <li>Explica próximos pasos en lenguaje simple.</li>
+          <li>Pasa casos delicados con contexto y seguimiento.</li>
+        </ul>
+        <div class="guardrails" aria-label="Controles de confianza">
+          <span>Identidad</span>
+          <span>Alcance</span>
+          <span>Seguimiento</span>
+        </div>
+      </section>
+    </div>
+
+    <section class="timeline" aria-labelledby="journey-title">
+      <div class="section-heading">
+        <p class="eyebrow">Ruta de atención</p>
+        <h2 id="journey-title">Del canal al resultado con seguimiento</h2>
+      </div>
+      <ol class="steps">
+        <template for:each={journeySteps} for:item="step">
+          <li key={step.label} class={step.className}>
+            <span class="step-index">{step.index}</span>
+            <strong>{step.label}</strong>
+            <span>{step.description}</span>
+          </li>
+        </template>
+      </ol>
+    </section>
+
+    <section class="channels" aria-labelledby="channels-title">
+      <div class="section-heading">
+        <p class="eyebrow">Canales</p>
+        <h2 id="channels-title">Atención inclusiva, una sola vista del servicio</h2>
+      </div>
+      <div class="channel-grid">
+        <template for:each={channels} for:item="channel">
+          <article key={channel.name} class="channel-card">
+            <span class="channel-icon" aria-hidden="true">{channel.icon}</span>
+            <h3>{channel.name}</h3>
+            <p>{channel.description}</p>
+          </article>
+        </template>
+      </div>
+    </section>
+
+    <section class="faq" aria-labelledby="faq-title">
+      <div class="section-heading">
+        <p class="eyebrow">Preguntas frecuentes</p>
+        <h2 id="faq-title">Información clara antes de pasar a un funcionario</h2>
+      </div>
+      <div class="faq-list">
+        <template for:each={faqs} for:item="faq">
+          <details key={faq.question}>
+            <summary>{faq.question}</summary>
+            <p>{faq.answer}</p>
+          </details>
+        </template>
+      </div>
+    </section>
+  </section>
+</template>

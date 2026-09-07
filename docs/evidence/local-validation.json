@@ -1,0 +1,99 @@
+{
+  "checkedAtUtc": "2026-09-07T16:10:29.833576+00:00",
+  "python": "3.14.0",
+  "pyyaml": "6.0.3",
+  "scope": "Offline parsing, minimal OpenAPI structure/internal refs, selected source consistency. No LWC compilation, AgentScript compilation, MUnit, Salesforce, Mule, SQL, network or UI execution.",
+  "results": [
+    {
+      "name": "format:force-app/main/default/lwc/cscBenefitPortal/cscBenefitPortal.js-meta.xml",
+      "passed": true,
+      "detail": "Parsed locally; runtime and provider schema not checked"
+    },
+    {
+      "name": "contract:mulesoft/agentforce-benefit-exp-api/api/agentforce-benefit-exp-api.openapi.yaml",
+      "passed": true,
+      "detail": "Minimal structure and 4 internal references resolved; not full OpenAPI schema validation"
+    },
+    {
+      "name": "format:mulesoft/agentforce-benefit-exp-api/api/agentforce-benefit-exp-api.openapi.yaml",
+      "passed": true,
+      "detail": "Parsed locally; runtime and provider schema not checked"
+    },
+    {
+      "name": "contract:mulesoft/benefit-case-prc-api/api/benefit-case-prc-api.openapi.yaml",
+      "passed": true,
+      "detail": "Minimal structure and 5 internal references resolved; not full OpenAPI schema validation"
+    },
+    {
+      "name": "format:mulesoft/benefit-case-prc-api/api/benefit-case-prc-api.openapi.yaml",
+      "passed": true,
+      "detail": "Parsed locally; runtime and provider schema not checked"
+    },
+    {
+      "name": "contract:mulesoft/benefit-status-sys-api/api/benefit-status-sys-api.openapi.yaml",
+      "passed": true,
+      "detail": "Minimal structure and 5 internal references resolved; not full OpenAPI schema validation"
+    },
+    {
+      "name": "format:mulesoft/benefit-status-sys-api/api/benefit-status-sys-api.openapi.yaml",
+      "passed": true,
+      "detail": "Parsed locally; runtime and provider schema not checked"
+    },
+    {
+      "name": "format:mulesoft/benefit-status-sys-api/pom.xml",
+      "passed": true,
+      "detail": "Parsed locally; runtime and provider schema not checked"
+    },
+    {
+      "name": "format:mulesoft/benefit-status-sys-api/src/main/mule/benefit-status-sys-api.xml",
+      "passed": true,
+      "detail": "Parsed locally; runtime and provider schema not checked"
+    },
+    {
+      "name": "format:mulesoft/benefit-status-sys-api/src/main/resources/config.yaml",
+      "passed": true,
+      "detail": "Parsed locally; runtime and provider schema not checked"
+    },
+    {
+      "name": "format:mulesoft/benefit-status-sys-api/src/main/resources/dev-secure-properties.example.yaml",
+      "passed": true,
+      "detail": "Parsed locally; runtime and provider schema not checked"
+    },
+    {
+      "name": "format:mulesoft/benefit-status-sys-api/src/test/munit/benefit-status-sys-api-test.xml",
+      "passed": true,
+      "detail": "Parsed locally; runtime and provider schema not checked"
+    },
+    {
+      "name": "format:sfdx-project.json",
+      "passed": true,
+      "detail": "Parsed locally; runtime and provider schema not checked"
+    },
+    {
+      "name": "lwc:handlers",
+      "passed": true,
+      "detail": "4 template handlers have methods; no compilation performed"
+    },
+    {
+      "name": "lwc:demo-notice",
+      "passed": true,
+      "detail": "Visible illustrative-only disclosure"
+    },
+    {
+      "name": "lwc:local-data",
+      "passed": true,
+      "detail": "No direct HTTP/Apex call in selected component"
+    },
+    {
+      "name": "agent:sample-scope",
+      "passed": true,
+      "detail": "2 unique fictional case IDs; no AgentScript grammar validation"
+    },
+    {
+      "name": "selected-text:tenant-secret-patterns",
+      "passed": true,
+      "detail": "No narrow pattern matches"
+    }
+  ],
+  "passed": true
+}

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mule xmlns="http://www.mulesoft.org/schema/mule/core"
+      xmlns:munit="http://www.mulesoft.org/schema/mule/munit"
+      xmlns:munit-tools="http://www.mulesoft.org/schema/mule/munit-tools"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="
+        http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+        http://www.mulesoft.org/schema/mule/munit http://www.mulesoft.org/schema/mule/munit/current/mule-munit.xsd
+        http://www.mulesoft.org/schema/mule/munit-tools http://www.mulesoft.org/schema/mule/munit-tools/current/mule-munit-tools.xsd">
+
+  <!-- Draft skeleton. VERIFY MUnit version/schema after creating the Mule app in Anypoint Code Builder or Studio. -->
+  <munit:config name="munit"/>
+
+  <munit:test name="get-benefit-case-status-flow-success-test"
+              description="Returns Persona Demo A benefit status when the case exists">
+    <munit:behavior>
+      <!-- TODO: mock db:select with one citizen_benefit_case row. -->
+    </munit:behavior>
+    <munit:execution>
+      <flow-ref name="get-benefit-case-status-flow"/>
+    </munit:execution>
+    <munit:validation>
+      <munit-tools:assert-that expression="#[payload.caseId]" is="#[MunitTools::equalTo('BEN-2026-004219')]"/>
+      <munit-tools:assert-that expression="#[payload.citizenRefMasked]" is="#[MunitTools::equalTo('CIT-****-4219')]"/>
+    </munit:validation>
+  </munit:test>
+
+  <munit:test name="get-benefit-case-status-flow-invalid-case-id-test"
+              description="Rejects malformed case identifiers">
+    <munit:behavior>
+      <!-- TODO: provide event attributes with invalid caseId and assert 400 error payload. -->
+    </munit:behavior>
+    <munit:execution>
+      <flow-ref name="get-benefit-case-status-flow"/>
+    </munit:execution>
+    <munit:validation>
+      <munit-tools:assert-that expression="#[payload.errorCode]" is="#[MunitTools::equalTo('INVALID_CASE_ID')]"/>
+    </munit:validation>
+  </munit:test>
+
+  <munit:test name="get-benefit-case-status-flow-not-found-test"
+              description="Returns not found when the database has no matching case">
+    <munit:behavior>
+      <!-- TODO: mock db:select with empty payload and assert CASE_NOT_FOUND. -->
+    </munit:behavior>
+    <munit:execution>
+      <flow-ref name="get-benefit-case-status-flow"/>
+    </munit:execution>
+    <munit:validation>
+      <munit-tools:assert-that expression="#[payload.errorCode]" is="#[MunitTools::equalTo('CASE_NOT_FOUND')]"/>
+    </munit:validation>
+  </munit:test>
+</mule>

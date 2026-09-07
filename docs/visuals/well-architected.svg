@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1200" viewBox="0 0 1800 1200" role="img" aria-labelledby="title desc">
+<title id="title">Salesforce Well-Architected: decisiones y evidencia del piloto ciudadano</title>
+<desc id="desc">Aplicación cualitativa del marco oficial Salesforce Well-Architected. Trusted contiene Secure, Compliant y Reliable; Easy contiene Intentional, Automated y Engaging; Adaptable contiene Resilient y Composable. Las tres columnas separan decisión de diseño, evidencia local y trabajo pendiente. No expresa puntuación, certificación ni conformidad demostrada.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#2463A6"/></marker></defs>
+<g font-family="Arial, Helvetica, sans-serif">
+<rect x="0" y="0" width="1800" height="1200" rx="0" fill="#F7F5EF"/>
+<rect x="80" y="70" width="10" height="104" rx="3" fill="#2463A6"/>
+<text x="112" y="91" font-size="20" font-weight="700" fill="#2463A6" text-anchor="start" letter-spacing="2">MARCO DE DECISIONES DEL PILOTO</text>
+<text x="112" y="148" font-size="54" font-weight="700" fill="#152837" text-anchor="start">Salesforce Well-Architected</text>
+<text x="112" y="188" font-size="24" font-weight="400" fill="#536671" text-anchor="start">Tres capacidades para ordenar las decisiones, reconocer la evidencia y priorizar lo que falta.</text>
+<rect x="80" y="233" width="516" height="776" rx="22" fill="#FFFFFF" stroke="#CED9DE" stroke-width="2"/>
+<rect x="80" y="233" width="516" height="8" rx="4" fill="#2463A6"/>
+<text x="108" y="293" font-size="37" font-weight="700" fill="#2463A6" text-anchor="start">Trusted</text>
+<text x="108" y="326" font-size="24" font-weight="700" fill="#152837" text-anchor="start">Confiable</text>
+<text x="108" y="356" font-size="20" font-weight="400" fill="#536671" text-anchor="start">Proteger a las personas y sus datos.</text>
+<line x1="108" y1="380" x2="568" y2="380" stroke="#CED9DE" stroke-width="2"/>
+<text x="108" y="419" font-size="23" font-weight="700" fill="#152837" text-anchor="start">Secure · Segura</text>
+<text x="108" y="446" font-size="19" font-weight="400" fill="#536671" text-anchor="start">Seguridad de organización,</text>
+<text x="108" y="470" font-size="19" font-weight="400" fill="#536671" text-anchor="start">sesión y datos.</text>
+<text x="108" y="503" font-size="23" font-weight="700" fill="#152837" text-anchor="start">Compliant · Conforme</text>
+<text x="108" y="530" font-size="19" font-weight="400" fill="#536671" text-anchor="start">Cumplimiento legal, ética</text>
+<text x="108" y="554" font-size="19" font-weight="400" fill="#536671" text-anchor="start">y accesibilidad.</text>
+<text x="108" y="587" font-size="23" font-weight="700" fill="#152837" text-anchor="start">Reliable · Fiable</text>
+<text x="108" y="614" font-size="19" font-weight="400" fill="#536671" text-anchor="start">Disponibilidad, rendimiento</text>
+<text x="108" y="638" font-size="19" font-weight="400" fill="#536671" text-anchor="start">y escalabilidad.</text>
+<line x1="108" y1="663" x2="568" y2="663" stroke="#CED9DE" stroke-width="2"/>
+<text x="108" y="699" font-size="17" font-weight="700" fill="#2463A6" text-anchor="start" letter-spacing="0.6">DECISIÓN DE DISEÑO</text>
+<text x="108" y="729" font-size="20" font-weight="400" fill="#152837" text-anchor="start">Autorizar cada caso, minimizar datos</text>
+<text x="108" y="756" font-size="20" font-weight="400" fill="#152837" text-anchor="start">y mantener la decisión humana.</text>
+<text x="108" y="804" font-size="17" font-weight="700" fill="#536671" text-anchor="start" letter-spacing="0.6">EVIDENCIA DISPONIBLE</text>
+<text x="108" y="834" font-size="20" font-weight="400" fill="#152837" text-anchor="start">Datos ficticios y contratos acotados.</text>
+<text x="108" y="861" font-size="20" font-weight="400" fill="#152837" text-anchor="start">No acreditan acceso real ni conformidad.</text>
+<rect x="98" y="894" width="480" height="97" rx="12" fill="#F4E5DF"/>
+<text x="108" y="921" font-size="17" font-weight="700" fill="#BB7768" text-anchor="start" letter-spacing="0.6">PENDIENTE PARA EL PILOTO</text>
+<text x="108" y="948" font-size="20" font-weight="400" fill="#152837" text-anchor="start">Identidad, pruebas de acceso por caso</text>
+<text x="108" y="975" font-size="20" font-weight="400" fill="#152837" text-anchor="start">y recuperación ante fallos.</text>
+<rect x="642" y="233" width="516" height="776" rx="22" fill="#FFFFFF" stroke="#CED9DE" stroke-width="2"/>
+<rect x="642" y="233" width="516" height="8" rx="4" fill="#2463A6"/>
+<text x="670" y="293" font-size="37" font-weight="700" fill="#2463A6" text-anchor="start">Easy</text>
+<text x="670" y="326" font-size="24" font-weight="700" fill="#152837" text-anchor="start">Sencilla</text>
+<text x="670" y="356" font-size="20" font-weight="400" fill="#536671" text-anchor="start">Entregar valor con una experiencia útil.</text>
+<line x1="670" y1="380" x2="1130" y2="380" stroke="#CED9DE" stroke-width="2"/>
+<text x="670" y="419" font-size="23" font-weight="700" fill="#152837" text-anchor="start">Intentional · Intencional</text>
+<text x="670" y="446" font-size="19" font-weight="400" fill="#536671" text-anchor="start">Estrategia, mantenibilidad</text>
+<text x="670" y="470" font-size="19" font-weight="400" fill="#536671" text-anchor="start">y legibilidad.</text>
+<text x="670" y="503" font-size="23" font-weight="700" fill="#152837" text-anchor="start">Automated · Automatizada</text>
+<text x="670" y="530" font-size="19" font-weight="400" fill="#536671" text-anchor="start">Eficiencia e integridad</text>
+<text x="670" y="554" font-size="19" font-weight="400" fill="#536671" text-anchor="start">de los datos.</text>
+<text x="670" y="587" font-size="23" font-weight="700" fill="#152837" text-anchor="start">Engaging · Atractiva</text>
+<text x="670" y="614" font-size="19" font-weight="400" fill="#536671" text-anchor="start">Experiencia simplificada</text>
+<text x="670" y="638" font-size="19" font-weight="400" fill="#536671" text-anchor="start">y ayuda a las personas.</text>
+<line x1="670" y1="663" x2="1130" y2="663" stroke="#CED9DE" stroke-width="2"/>
+<text x="670" y="699" font-size="17" font-weight="700" fill="#2463A6" text-anchor="start" letter-spacing="0.6">DECISIÓN DE DISEÑO</text>
+<text x="670" y="729" font-size="20" font-weight="400" fill="#152837" text-anchor="start">Un trámite y un recorrido corto;</text>
+<text x="670" y="756" font-size="20" font-weight="400" fill="#152837" text-anchor="start">confirmación antes de enviar.</text>
+<text x="670" y="804" font-size="17" font-weight="700" fill="#536671" text-anchor="start" letter-spacing="0.6">EVIDENCIA DISPONIBLE</text>
+<text x="670" y="834" font-size="20" font-weight="400" fill="#152837" text-anchor="start">LWC reutilizado y guía del piloto.</text>
+<text x="670" y="861" font-size="20" font-weight="400" fill="#152837" text-anchor="start">La conversación es ilustrativa.</text>
+<rect x="660" y="894" width="480" height="97" rx="12" fill="#F4E5DF"/>
+<text x="670" y="921" font-size="17" font-weight="700" fill="#BB7768" text-anchor="start" letter-spacing="0.6">PENDIENTE PARA EL PILOTO</text>
+<text x="670" y="948" font-size="20" font-weight="400" fill="#152837" text-anchor="start">Probar usabilidad y accesibilidad;</text>
+<text x="670" y="975" font-size="20" font-weight="400" fill="#152837" text-anchor="start">conectar solicitud y bandeja.</text>
+<rect x="1204" y="233" width="516" height="776" rx="22" fill="#FFFFFF" stroke="#CED9DE" stroke-width="2"/>
+<rect x="1204" y="233" width="516" height="8" rx="4" fill="#2463A6"/>
+<text x="1232" y="293" font-size="37" font-weight="700" fill="#2463A6" text-anchor="start">Adaptable</text>
+<text x="1232" y="326" font-size="24" font-weight="700" fill="#152837" text-anchor="start">Adaptable</text>
+<text x="1232" y="356" font-size="20" font-weight="400" fill="#536671" text-anchor="start">Evolucionar con las necesidades del servicio.</text>
+<line x1="1232" y1="380" x2="1692" y2="380" stroke="#CED9DE" stroke-width="2"/>
+<text x="1232" y="430" font-size="23" font-weight="700" fill="#152837" text-anchor="start">Resilient · Resiliente</text>
+<text x="1232" y="457" font-size="19" font-weight="400" fill="#536671" text-anchor="start">Ciclo de vida de aplicaciones,</text>
+<text x="1232" y="481" font-size="19" font-weight="400" fill="#536671" text-anchor="start">respuesta a incidentes y continuidad.</text>
+<text x="1232" y="550" font-size="23" font-weight="700" fill="#152837" text-anchor="start">Composable · Componible</text>
+<text x="1232" y="577" font-size="19" font-weight="400" fill="#536671" text-anchor="start">Separación de responsabilidades,</text>
+<text x="1232" y="601" font-size="19" font-weight="400" fill="#536671" text-anchor="start">interoperabilidad y empaquetado.</text>
+<line x1="1232" y1="663" x2="1692" y2="663" stroke="#CED9DE" stroke-width="2"/>
+<text x="1232" y="699" font-size="17" font-weight="700" fill="#2463A6" text-anchor="start" letter-spacing="0.6">DECISIÓN DE DISEÑO</text>
+<text x="1232" y="729" font-size="20" font-weight="400" fill="#152837" text-anchor="start">Separar canal, reglas y registro;</text>
+<text x="1232" y="756" font-size="20" font-weight="400" fill="#152837" text-anchor="start">mantener contratos y trazabilidad.</text>
+<text x="1232" y="804" font-size="17" font-weight="700" fill="#536671" text-anchor="start" letter-spacing="0.6">EVIDENCIA DISPONIBLE</text>
+<text x="1232" y="834" font-size="20" font-weight="400" fill="#152837" text-anchor="start">OpenAPI y adaptador preliminar.</text>
+<text x="1232" y="861" font-size="20" font-weight="400" fill="#152837" text-anchor="start">MUnit definido, sin ejecutar.</text>
+<rect x="1222" y="894" width="480" height="97" rx="12" fill="#F4E5DF"/>
+<text x="1232" y="921" font-size="17" font-weight="700" fill="#BB7768" text-anchor="start" letter-spacing="0.6">PENDIENTE PARA EL PILOTO</text>
+<text x="1232" y="948" font-size="20" font-weight="400" fill="#152837" text-anchor="start">Compilar y probar las integraciones;</text>
+<text x="1232" y="975" font-size="20" font-weight="400" fill="#152837" text-anchor="start">ensayar despliegue y recuperación.</text>
+<rect x="80" y="1036" width="1640" height="59" rx="14" fill="#ECF2F8"/>
+<text x="108" y="1073" font-size="21" font-weight="400" fill="#152837" text-anchor="start">Lectura cualitativa: sin puntuación ni certificación. Portal público no confirmado operativo; causa del error no establecida.</text>
+<line x1="80" y1="1119" x2="1720" y2="1119" stroke="#CED9DE" stroke-width="2"/>
+<text x="80" y="1150" font-size="18" font-weight="400" fill="#536671" text-anchor="start">Fuentes: architect.salesforce.com / Well-Architected / Overview, Trusted, Easy y Adaptable · Verificado 2026-09-07.</text>
+<text x="80" y="1178" font-size="17" font-weight="400" fill="#536671" text-anchor="start">Traducciones de trabajo; se conservan los nombres oficiales en inglés. Aplicación al proyecto: docs/architecture.md y docs/evidence/status.md.</text>
+</g>
+</svg>

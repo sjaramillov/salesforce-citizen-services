@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Preliminary inherited flow. XML parsing is not Mule runtime/schema validation. See docs/evidence/status.md. -->
+<mule xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+      xmlns="http://www.mulesoft.org/schema/mule/core"
+      xmlns:db="http://www.mulesoft.org/schema/mule/db"
+      xmlns:ee="http://www.mulesoft.org/schema/mule/ee/core"
+      xmlns:http="http://www.mulesoft.org/schema/mule/http"
+      xmlns:secure-properties="http://www.mulesoft.org/schema/mule/secure-properties"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="
+        http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+        http://www.mulesoft.org/schema/mule/db http://www.mulesoft.org/schema/mule/db/current/mule-db.xsd
+        http://www.mulesoft.org/schema/mule/ee/core http://www.mulesoft.org/schema/mule/ee/core/current/mule-ee.xsd
+        http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd
+        http://www.mulesoft.org/schema/mule/secure-properties http://www.mulesoft.org/schema/mule/secure-properties/current/mule-secure-properties.xsd">
+
+  <configuration-properties file="config.yaml"/>
+
+  <!-- VERIFY encryption key injection approach for local runtime vs CloudHub 2.0. -->
+  <secure-properties:config
+      name="secure-properties-config"
+      file="${runtime.env}-secure-properties.yaml"
+      key="${secure.properties.key}">
+    <secure-properties:encrypt algorithm="AES" mode="CBC"/>
+  </secure-properties:config>
+
+  <http:listener-config name="http-listener-config">
+    <http:listener-connection host="${http.host}" port="${http.port}"/>
+  </http:listener-config>
+
+  <!-- Oracle Autonomous demo connector.
+       VERIFY final driver dependency and wallet/TCPS settings in Anypoint Code Builder or Studio. -->
+  <db:config name="oracle-db-config">
+    <db:generic-connection
+        url="${secure::oracle.jdbcUrl}"
+        driverClassName="oracle.jdbc.OracleDriver"
+        user="${secure::oracle.username}"
+        password="${secure::oracle.password}">
+      <db:connection-properties>
+        <db:connection-property key="oracle.net.tns_admin" value="${secure::oracle.walletPath}"/>
+      </db:connection-properties>
+    </db:generic-connection>
+  </db:config>
+
+  <flow name="get-benefit-case-status-flow">
+    <http:listener
+        config-ref="http-listener-config"
+        path="${api.basePath}/benefit-cases/{caseId}/status"
+        allowedMethods="GET"/>
+
+    <set-variable
+        variableName="correlationId"
+        value="#[attributes.headers.'x-correlation-id' default correlationId]"/>
+    <set-variable
+        variableName="caseId"
+        value="#[attributes.uriParams.caseId]"/>
+
+    <choice doc:name="Validate case id">
+      <when expression="#[vars.caseId matches /^BEN-[0-9]{4}-[0-9]{6}$/]">
+        <db:select config-ref="oracle-db-config" doc:name="Select benefit case">
+          <db:sql><![CDATA[
+            select
+              case_id,
+              citizen_display_name,
+              citizen_ref_masked,
+              benefit_type,
+              status_code,
+              missing_document,
+              next_deadline,
+              preferred_channel,
+              last_updated_at
+            from citizen_benefit_case
+            where case_id = :caseId
+          ]]></db:sql>
+          <db:input-parameters><![CDATA[#[{
+            caseId: vars.caseId
+          }]]]></db:input-parameters>
+        </db:select>
+
+        <choice doc:name="Map found/not found">
+          <when expression="#[!isEmpty(payload)]">
+            <ee:transform doc:name="Map benefit case response">
+              <ee:message>
+                <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+var row = payload[0]
+---
+{
+  caseId: row.CASE_ID,
+  citizenDisplayName: row.CITIZEN_DISPLAY_NAME,
+  citizenRefMasked: row.CITIZEN_REF_MASKED,
+  benefitType: row.BENEFIT_TYPE,
+  status: row.STATUS_CODE,
+  missingDocument: row.MISSING_DOCUMENT default null,
+  nextDeadline: row.NEXT_DEADLINE as Date? default null,
+  preferredChannel: row.PREFERRED_CHANNEL,
+  lastUpdatedAt: row.LAST_UPDATED_AT as DateTime? default null,
+  sourceSystem: p("api.sourceSystem"),
+  correlationId: vars.correlationId
+}]]></ee:set-payload>
+              </ee:message>
+            </ee:transform>
+            <set-property propertyName="x-correlation-id" value="#[vars.correlationId]"/>
+          </when>
+          <otherwise>
+            <raise-error type="BENEFIT:CASE_NOT_FOUND" description="Benefit case was not found."/>
+          </otherwise>
+        </choice>
+      </when>
+      <otherwise>
+        <raise-error type="BENEFIT:INVALID_CASE_ID" description="Invalid benefit case id."/>
+      </otherwise>
+    </choice>
+
+    <error-handler>
+      <on-error-propagate type="BENEFIT:INVALID_CASE_ID" enableNotifications="true" logException="false">
+        <set-property propertyName="httpStatus" value="400"/>
+        <ee:transform doc:name="Invalid case id response">
+          <ee:message>
+            <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{
+  errorCode: "INVALID_CASE_ID",
+  message: "The caseId must match BEN-YYYY-NNNNNN.",
+  correlationId: vars.correlationId default correlationId
+}]]></ee:set-payload>
+          </ee:message>
+        </ee:transform>
+      </on-error-propagate>
+
+      <on-error-propagate type="BENEFIT:CASE_NOT_FOUND" enableNotifications="true" logException="false">
+        <set-property propertyName="httpStatus" value="404"/>
+        <ee:transform doc:name="Case not found response">
+          <ee:message>
+            <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{
+  errorCode: "CASE_NOT_FOUND",
+  message: "Benefit case was not found.",
+  correlationId: vars.correlationId default correlationId
+}]]></ee:set-payload>
+          </ee:message>
+        </ee:transform>
+      </on-error-propagate>
+
+      <on-error-propagate type="ANY" enableNotifications="true" logException="true">
+        <set-property propertyName="httpStatus" value="500"/>
+        <ee:transform doc:name="Unexpected error response">
+          <ee:message>
+            <ee:set-payload><![CDATA[%dw 2.0
+output application/json
+---
+{
+  errorCode: "LEGACY_SYSTEM_ERROR",
+  message: "The legacy benefit status service is temporarily unavailable.",
+  correlationId: vars.correlationId default correlationId
+}]]></ee:set-payload>
+          </ee:message>
+        </ee:transform>
+      </on-error-propagate>
+    </error-handler>
+  </flow>
+</mule>

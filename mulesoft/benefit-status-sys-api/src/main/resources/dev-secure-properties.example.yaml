@@ -1,0 +1,14 @@
+# Example shape only. Do not commit real encrypted values or secrets.
+# Mule Secure Configuration Properties supports secure:: references and environment-specific files.
+# Official docs checked 2026-07-01:
+# https://docs.mulesoft.com/mule-runtime/latest/secure-configuration-properties
+
+secure:
+  oracle:
+    jdbcUrl: "![ENCRYPTED_ORACLE_JDBC_URL_PLACEHOLDER]"
+    username: "![ENCRYPTED_ORACLE_USERNAME_PLACEHOLDER]"
+    password: "![ENCRYPTED_ORACLE_PASSWORD_PLACEHOLDER]"
+    walletPath: "![ENCRYPTED_ORACLE_WALLET_PATH_PLACEHOLDER]"
+  api:
+    clientId: "![ENCRYPTED_CLIENT_ID_PLACEHOLDER]"
+    clientSecret: "![ENCRYPTED_CLIENT_SECRET_PLACEHOLDER]"

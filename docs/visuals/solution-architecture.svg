@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1200" viewBox="0 0 1800 1200" role="img" aria-labelledby="title desc">
+<title id="title">Arquitectura de solución: Servicios ciudadanos</title>
+<desc id="desc">Dos vistas separan la evidencia local de un piloto Salesforce propuesto. El LWC usa datos locales, AgentScript es una referencia y Mule contiene contratos y un flujo preliminar. La propuesta conecta Experience Cloud, identidad, Agentforce y tres capas API. Escritura confirmada y revisión humana siguen pendientes. El portal público no quedó confirmado operativo.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse"><path d="M 0 0 L 10 5 L 0 10 z" fill="#2463A6"/></marker></defs>
+<g font-family="Arial, Helvetica, sans-serif">
+<rect x="0" y="0" width="1800" height="1200" rx="0" fill="#F7F5EF"/>
+<rect x="80" y="70" width="10" height="104" rx="3" fill="#2463A6"/>
+<text x="112" y="91" font-size="20" font-weight="700" fill="#2463A6" text-anchor="start" letter-spacing="2">SERVICIOS CIUDADANOS</text>
+<text x="112" y="148" font-size="49" font-weight="700" fill="#152837" text-anchor="start">De la consulta al caso, con control humano</text>
+<text x="112" y="188" font-size="24" font-weight="400" fill="#536671" text-anchor="start">Arquitectura de solución · evidencia local y objetivo de piloto claramente separados</text>
+<rect x="80" y="228" width="1640" height="254" rx="22" fill="#ECF2F8" stroke="#CED9DE" stroke-width="2"/>
+<text x="112" y="268" font-size="21" font-weight="700" fill="#2463A6" text-anchor="start" letter-spacing="1">01  /  ACTUAL EN EL REPOSITORIO</text>
+<text x="1688" y="268" font-size="19" font-weight="400" fill="#536671" text-anchor="end">Superficies independientes</text>
+<rect x="112" y="291" width="485" height="119" rx="14" fill="#FFFFFF" stroke="#2463A6" stroke-width="2"/>
+<text x="132" y="325" font-size="26" font-weight="700" fill="#152837" text-anchor="start">Portal LWC</text>
+<text x="132" y="355" font-size="19" font-weight="400" fill="#536671" text-anchor="start">Consulta y conversación ilustrativas</text>
+<text x="132" y="381" font-size="19" font-weight="400" fill="#536671" text-anchor="start">Datos ficticios locales; sin llamada a backend</text>
+<rect x="638" y="291" width="485" height="119" rx="14" fill="#FFFFFF" stroke="#2463A6" stroke-width="2"/>
+<text x="658" y="325" font-size="26" font-weight="700" fill="#152837" text-anchor="start">AgentScript de referencia</text>
+<text x="658" y="355" font-size="19" font-weight="400" fill="#536671" text-anchor="start">Instrucciones y dos casos sintéticos</text>
+<text x="658" y="381" font-size="19" font-weight="400" fill="#536671" text-anchor="start">Sin compilación ni conexión probada</text>
+<rect x="1164" y="291" width="524" height="119" rx="14" fill="#FFFFFF" stroke="#2463A6" stroke-width="2"/>
+<text x="1184" y="325" font-size="25" font-weight="700" fill="#152837" text-anchor="start">Contratos y adaptador preliminar</text>
+<text x="1184" y="355" font-size="19" font-weight="400" fill="#536671" text-anchor="start">Experience / Process / System APIs</text>
+<text x="1184" y="381" font-size="19" font-weight="400" fill="#536671" text-anchor="start">Flujo Mule + SQL demo; runtime no verificado</text>
+<rect x="112" y="429" width="17" height="17" rx="4" fill="#BB7768"/>
+<text x="141" y="444" font-size="20" font-weight="400" fill="#536671" text-anchor="start">Portal público: preparación → error. Operación no confirmada en la comprobación del 07 sep 2026.</text>
+<rect x="80" y="517" width="1640" height="508" rx="22" fill="#FFFFFF" stroke="#CED9DE" stroke-width="2"/>
+<text x="112" y="558" font-size="21" font-weight="700" fill="#2463A6" text-anchor="start" letter-spacing="1">02  /  OBJETIVO SALESFORCE</text>
+<rect x="1443" y="536" width="245" height="36" rx="18" fill="#F4E5DF"/>
+<text x="1565" y="560" font-size="17" font-weight="700" fill="#BB7768" text-anchor="middle" letter-spacing="0.5">PILOTO PROPUESTO</text>
+<text x="112" y="594" font-size="22" font-weight="400" fill="#536671" text-anchor="start">Un trámite · un canal web · fuentes aprobadas · una bandeja de revisión</text>
+<path d="M 390 687 H 438" fill="none" stroke="#2463A6" stroke-width="2.5" marker-end="url(#arrow)" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<path d="M 688 687 H 736" fill="none" stroke="#2463A6" stroke-width="2.5" marker-end="url(#arrow)" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<path d="M 986 687 H 1034" fill="none" stroke="#2463A6" stroke-width="2.5" marker-end="url(#arrow)" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<path d="M 1309 687 H 1357" fill="none" stroke="#2463A6" stroke-width="2.5" marker-end="url(#arrow)" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<path d="M 1494 742 V 838" fill="none" stroke="#2463A6" stroke-width="2.5" marker-end="url(#arrow)" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<path d="M 1494 772 H 925 V 838" fill="none" stroke="#2463A6" stroke-width="2.5" marker-end="url(#arrow)" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<path d="M 1430 902 H 1392" fill="none" stroke="#2463A6" stroke-width="2.5" marker-end="url(#arrow)" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<path d="M 780 902 H 728" fill="none" stroke="#2463A6" stroke-width="2.5" marker-end="url(#arrow)" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<path d="M 255 838 V 797 H 861 V 742" fill="none" stroke="#2463A6" stroke-width="2.5" marker-end="url(#arrow)" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="7 5"/>
+<text x="270" y="788" font-size="16" font-weight="400" fill="#536671" text-anchor="start">Conocimiento con referencia a fuente</text>
+<text x="1100" y="764" font-size="16" font-weight="400" fill="#BB7768" text-anchor="start">Rama nueva de solicitud</text>
+<rect x="120" y="634" width="270" height="108" rx="14" fill="#FFFFFF" stroke="#2463A6" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="140" y="668" font-size="24" font-weight="700" fill="#152837" text-anchor="start">Experience Cloud</text>
+<text x="140" y="698" font-size="19" font-weight="400" fill="#536671" text-anchor="start">LWC para el ciudadano</text>
+<rect x="438" y="634" width="250" height="108" rx="14" fill="#FFFFFF" stroke="#2463A6" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="458" y="668" font-size="25" font-weight="700" fill="#152837" text-anchor="start">Identidad</text>
+<text x="458" y="698" font-size="19" font-weight="400" fill="#536671" text-anchor="start">Autorización por caso</text>
+<rect x="736" y="634" width="250" height="108" rx="14" fill="#FFFFFF" stroke="#2463A6" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="756" y="668" font-size="25" font-weight="700" fill="#152837" text-anchor="start">Agentforce</text>
+<text x="756" y="698" font-size="19" font-weight="400" fill="#536671" text-anchor="start">Orientación y preparación</text>
+<rect x="1034" y="634" width="275" height="108" rx="14" fill="#FFFFFF" stroke="#2463A6" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="1054" y="668" font-size="25" font-weight="700" fill="#152837" text-anchor="start">Experience API</text>
+<text x="1054" y="698" font-size="19" font-weight="400" fill="#536671" text-anchor="start">Respuesta útil y minimizada</text>
+<rect x="1357" y="634" width="275" height="108" rx="14" fill="#FFFFFF" stroke="#2463A6" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="1377" y="668" font-size="25" font-weight="700" fill="#152837" text-anchor="start">Process API</text>
+<text x="1377" y="698" font-size="19" font-weight="400" fill="#536671" text-anchor="start">Reglas y siguiente paso</text>
+<rect x="120" y="838" width="270" height="128" rx="14" fill="#FFFFFF" stroke="#2463A6" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="140" y="872" font-size="25" font-weight="700" fill="#152837" text-anchor="start">Requisitos</text>
+<text x="140" y="902" font-size="19" font-weight="400" fill="#536671" text-anchor="start">Contenido aprobado</text>
+<text x="140" y="928" font-size="19" font-weight="400" fill="#536671" text-anchor="start">y versionado</text>
+<rect x="438" y="838" width="290" height="128" rx="14" fill="#F4E5DF" stroke="#BB7768" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="458" y="872" font-size="25" font-weight="700" fill="#152837" text-anchor="start">Revisión humana</text>
+<text x="458" y="902" font-size="19" font-weight="400" fill="#536671" text-anchor="start">Funcionario decide</text>
+<text x="458" y="928" font-size="19" font-weight="400" fill="#536671" text-anchor="start">y registra el resultado</text>
+<rect x="780" y="838" width="290" height="128" rx="14" fill="#F4E5DF" stroke="#BB7768" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="800" y="872" font-size="24" font-weight="700" fill="#152837" text-anchor="start">Confirmar y guardar</text>
+<text x="800" y="902" font-size="19" font-weight="400" fill="#536671" text-anchor="start">Nueva acción + Case</text>
+<text x="800" y="928" font-size="19" font-weight="400" fill="#536671" text-anchor="start">Envío explícito e idempotente</text>
+<rect x="1122" y="838" width="270" height="128" rx="14" fill="#FFFFFF" stroke="#2463A6" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="1142" y="872" font-size="23" font-weight="700" fill="#152837" text-anchor="start">Registro de la entidad</text>
+<text x="1142" y="902" font-size="19" font-weight="400" fill="#536671" text-anchor="start">Legacy autorizado</text>
+<text x="1142" y="928" font-size="19" font-weight="400" fill="#536671" text-anchor="start">Adaptador reemplazable</text>
+<rect x="1430" y="838" width="270" height="128" rx="14" fill="#FFFFFF" stroke="#2463A6" stroke-width="2" stroke-dasharray="7 5"/>
+<text x="1450" y="872" font-size="25" font-weight="700" fill="#152837" text-anchor="start">System API</text>
+<text x="1450" y="902" font-size="19" font-weight="400" fill="#536671" text-anchor="start">Consulta del registro</text>
+<text x="1450" y="928" font-size="19" font-weight="400" fill="#536671" text-anchor="start">Contrato estable</text>
+<text x="112" y="1000" font-size="20" font-weight="400" fill="#536671" text-anchor="start">Transversal propuesto: autorización en código · errores seguros · trazas correlacionadas y auditoría minimizada</text>
+<line x1="112" y1="1067" x2="166" y2="1067" stroke="#2463A6" stroke-width="3"/>
+<text x="178" y="1074" font-size="19" font-weight="400" fill="#536671" text-anchor="start">Artefacto local disponible</text>
+<line x1="583" y1="1067" x2="637" y2="1067" stroke="#2463A6" stroke-width="3" stroke-dasharray="7 5"/>
+<text x="649" y="1074" font-size="19" font-weight="400" fill="#536671" text-anchor="start">Componente o conexión propuestos</text>
+<rect x="1190" y="1055" width="19" height="19" rx="4" fill="#F4E5DF" stroke="#BB7768" stroke-width="2"/>
+<text x="1221" y="1074" font-size="19" font-weight="400" fill="#536671" text-anchor="start">Escritura y decisión humana pendientes</text>
+<line x1="80" y1="1105" x2="1720" y2="1105" stroke="#CED9DE" stroke-width="2"/>
+<text x="80" y="1140" font-size="18" font-weight="400" fill="#536671" text-anchor="start">Base: docs/architecture.md · docs/evidence/status.md · separación API-led documentada en el proyecto.</text>
+<text x="80" y="1170" font-size="18" font-weight="400" fill="#536671" text-anchor="start">Marco: architect.salesforce.com / Well-Architected · Fuentes y alcance en diagram-notes.md · Verificado 2026-09-07.</text>
+</g>
+</svg>

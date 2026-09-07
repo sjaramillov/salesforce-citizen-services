@@ -1,0 +1,16 @@
+api:
+  name: "benefit-status-sys-api"
+  version: "v1"
+  basePath: "/benefit-status-sys-api/v1"
+  sourceSystem: "COBOLSIM"
+
+http:
+  host: "0.0.0.0"
+  port: "8081"
+
+oracle:
+  tnsAlias: "REPLACE_WITH_TARGET_TNS_ALIAS" # VERIFY with local wallet/service name.
+  queryTimeoutSeconds: "10"
+
+runtime:
+  env: "dev"

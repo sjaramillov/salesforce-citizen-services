@@ -1,0 +1,66 @@
+{
+  "schema_version": 1,
+  "project": "salesforce-citizen-services",
+  "created_on": "2026-09-07",
+  "cover": {
+    "method": "Original AI image generation with image_gen; project identity refined with the same tool.",
+    "prompt_summary": "Espacio cívico de papel y vidrio, conversación y atención humana, en azul, coral y marfil. Composición editorial amplia, título en español, identificador propio del proyecto, sin logos ni métricas ficticias.",
+    "is_runtime_evidence": false,
+    "original_preserved": true
+  },
+  "diagrams": {
+    "method": "Native editable SVG, rendered to PNG with CairoSVG.",
+    "framework": "Salesforce Well-Architected",
+    "official_sources": "sources.json",
+    "interpretation": "Project review; current evidence and proposed architecture are separate. No certification or score."
+  },
+  "validation": {
+    "visual_review": "All three images inspected at full artifact size.",
+    "svg_dimensions": [
+      1800,
+      1200
+    ],
+    "external_svg_resources": false,
+    "source_hashes": "sources.json",
+    "max_image_bytes": 3000000
+  },
+  "files": [
+    {
+      "file": "cover.png",
+      "sha256": "d32b3aab5820126ae6d3c336d6b94f958096197da82e687a82ee5c1de9b75064",
+      "bytes": 2068305,
+      "dimensions": [
+        1672,
+        941
+      ]
+    },
+    {
+      "file": "solution-architecture.svg",
+      "sha256": "0b671afb73fb1ec133d6a1d3a98c4ab1f0adb43310ae860e76e9deb816689dad",
+      "bytes": 11651
+    },
+    {
+      "file": "solution-architecture.png",
+      "sha256": "f7b1e6192e22cc29bfd2c97b6c38e5bd7deeb5012a6f04503dc970dba3ee1256",
+      "bytes": 192709,
+      "dimensions": [
+        1800,
+        1200
+      ]
+    },
+    {
+      "file": "well-architected.svg",
+      "sha256": "dd2e27a801e883fe843cfb91c1bbe9460c2c6e477ee448fb8bb21b41d12a4cfd",
+      "bytes": 11114
+    },
+    {
+      "file": "well-architected.png",
+      "sha256": "9aab5a4bdd48786169a97492cf7beab28b2632f88546512c7053c14a287e0404",
+      "bytes": 191325,
+      "dimensions": [
+        1800,
+        1200
+      ]
+    }
+  ]
+}
