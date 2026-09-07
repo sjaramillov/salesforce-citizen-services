@@ -5,9 +5,33 @@ import unittest
 from pathlib import Path
 
 from publication_policy import private_path_reason
+from check_publication_history import audit_history
 
 
 class PublicationPolicyTest(unittest.TestCase):
+    def test_history_rejects_private_file_after_index_and_commit_removal(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary)
+            def git(*args):
+                return subprocess.run(['git', '-C', str(root), *args], check=True, capture_output=True, text=True)
+            git('init', '-q')
+            git('config', 'user.name', 'Publication boundary test')
+            git('config', 'user.email', 'test@example.invalid')
+            git('config', 'commit.gpgsign', 'false')
+            (root / 'README.md').write_text('Synthetic fixture\n', encoding='utf-8')
+            git('add', 'README.md')
+            git('commit', '-qm', 'Safe fixture')
+            self.assertEqual(audit_history(root)['findings'], [])
+            private_file = root / 'state.tfstate.backup'
+            private_file.write_text('{}\n', encoding='utf-8')
+            git('add', private_file.name)
+            git('commit', '-qm', 'Synthetic private path')
+            git('rm', '--cached', private_file.name)
+            self.assertEqual(audit_history(root)['findings'][0]['path'], private_file.name)
+            private_file.unlink()
+            git('commit', '-qm', 'Remove private path from current tree')
+            self.assertEqual(audit_history(root)['findings'][0]['path'], private_file.name)
+
     def test_rejects_private_paths_and_backup_variants(self):
         paths = (
             '.aws/credentials', 'nested/.ssh/id_ed25519', '.kube/config',

@@ -27,6 +27,7 @@ Antes de publicar, comprueba el índice y ejecuta:
 ```bash
 git diff --cached --stat
 python3 scripts/check_repository.py
+python3 scripts/check_publication_history.py
 python3 -m unittest discover -s scripts -p 'test_publication_policy.py'
 gitleaks git . --redact
 ```
@@ -49,8 +50,10 @@ Gitleaks y activa el hook local de este repositorio:
 git config --local core.hooksPath .githooks
 ```
 
-El hook `pre-push` comprueba las rutas versionadas y escanea el historial local
-con Gitleaks antes de la transferencia. Busca el ejecutable en `PATH` o en
+El hook `pre-push` comprueba las rutas versionadas, las rutas de todos los árboles
+del historial local y el contenido histórico con Gitleaks antes de la transferencia.
+Retirar un archivo del índice o del commit actual no oculta su ruta histórica.
+Busca el ejecutable en `PATH` o en
 `~/.local/bin/gitleaks` y bloquea el envío si falta el escáner. La configuración
 del hook es local: cada clon debe activarla. Los controles de GitHub siguen
 siendo necesarios, porque un hook local puede omitirse.
